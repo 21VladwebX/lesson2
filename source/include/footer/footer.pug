@@ -1,0 +1,28 @@
+-var content1 = ["О магазине","Контакты","Оплата и доставка","Сотрудничиство с нами","Гаратнтии и конфидициальность"];
+-var content2 = ["Акции","Предложения недели","Клубные цены ","Распродажа дня","Уцененные товары","Расширеная гарантия"];
+-var content3 = ["Вопросы и ответы","Связь с руководительством","Служба поддержки","Возврат товаров"];
+
+footer
+  div.footer
+    div.footer-content-left
+      div.footer-content-left1 Акции
+        for names in content1
+          span.footer-content-left1-elem= names
+          br
+      div.footer-content-left2 Выгодные предложения
+        for names in content2
+          span.footer-content-left2-elem= names
+          br
+      div.footer-content-left3 Помощь
+        for names in content3
+          span.footer-content-left3-elem= names
+          br
+  div.footer-content-right
+    p Узнавайте первыми о распродажах
+    form(name="flud")
+      input(type="text")
+      button Подписаться
+    b Подписывайтесь на нас:
+  -  for(var i = 0; i <= 6; i++){
+        img.footer-soc-img(src="../../img/soc" + i + ".png")
+  -  }
